@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_voter_voter_personal_details",
+  "info": {
+    "displayName": "Voter_Personal_Details"
+  },
+  "options": {},
+  "attributes": {
+    "NIC_Number": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "enumeration",
+      "enum": [
+        "Madam",
+        "Mr",
+        "Mrs",
+        "Ms",
+        "Miss",
+        "Dr",
+        "Professor "
+      ]
+    },
+    "Occupation": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female",
+        "Other"
+      ]
+    },
+    "Address": {
+      "type": "string"
+    },
+    "Civil_Status": {
+      "type": "string"
+    },
+    "NJP_Party_Member": {
+      "type": "boolean"
+    },
+    "Date_of_Birth": {
+      "type": "date"
+    }
+  }
+}

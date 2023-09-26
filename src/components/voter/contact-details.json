@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_voter_contact_details",
+  "info": {
+    "displayName": "Voter_Contact_Details",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Mobile_Number_1": {
+      "type": "string"
+    },
+    "Mobile_Number_2": {
+      "type": "string"
+    },
+    "WhatsApp_Number": {
+      "type": "string"
+    },
+    "Facebook_Link": {
+      "type": "string"
+    }
+  }
+}
