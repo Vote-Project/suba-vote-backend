@@ -361,196 +361,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiVoterVoter extends Schema.CollectionType {
-  collectionName: 'voters';
-  info: {
-    singularName: 'voter';
-    pluralName: 'voters';
-    displayName: 'Voter';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Name: Attribute.String;
-    NIC_Number: Attribute.String & Attribute.Unique;
-    Title: Attribute.Enumeration<
-      ['Madam', 'Mr', 'Mrs', 'Ms', 'Miss', 'Dr', 'Professor ']
-    >;
-    Occupation: Attribute.String;
-    Gender: Attribute.Enumeration<['Male', 'Female', 'Other']>;
-    Address: Attribute.String;
-    Civil_Status: Attribute.String;
-    NJP_Party_Member: Attribute.Boolean;
-    Date_of_Birth: Attribute.Date;
-    Mobile_Number_1: Attribute.String;
-    Mobile_Number_2: Attribute.String;
-    WhatsApp_Number: Attribute.String;
-    Facebook_Link: Attribute.String;
-    District: Attribute.Enumeration<['Colombo']>;
-    Seat: Attribute.Enumeration<
-      [
-        'ColomboNorth',
-        'ColomboCentral',
-        'Borella',
-        'ColomboEast',
-        'ColomboWest',
-        'Dehiwala',
-        'Ratmalana',
-        'Kollonnawa',
-        'Kotte',
-        'Kaduwela',
-        'Awissawella',
-        'Homagama',
-        'Maharagama',
-        'Kesbewa',
-        'Moratuwa'
-      ]
-    >;
-    Local_Authority: Attribute.Enumeration<
-      [
-        'Colombo Municipal Council',
-        'Dehiwala',
-        'MountLavinia',
-        'Municipal Council Dehiwala',
-        'MountLavinia Municipal Council',
-        'Kollonnawa Urban Council',
-        'Kotikawatta',
-        'Mulleriyawa Pradeshiyasabha',
-        'Sri Jayawardenepura Kotte Municipal Council',
-        'Kaduwela Municipal Council',
-        'Seethawakapura Urban Council',
-        'Seethawakapura Pradeshiyasabha',
-        'Homagama PradeshiyaSabha',
-        'Maharagama UrbanCouncil',
-        'Kesbewa UrbanCouncil',
-        'Boralesgamuwa Urban Council',
-        'Moratuwa Municipal Council'
-      ]
-    >;
-    Ward: Attribute.Enumeration<
-      [
-        'Sammanthranapura',
-        'Mattakkuliya',
-        'Modara',
-        'Mahawatta',
-        'AluthMawatha',
-        'Lunupokuna',
-        'KotahenaWest',
-        'KotahenaEast',
-        'Bloemendhal',
-        'Jintupitiya',
-        'Kochchikade',
-        'KochchikadeSouth',
-        'GrandpassNorth',
-        'Navagampura',
-        'MaligawattaEast',
-        'GrandpassSouth',
-        'Khettarama',
-        'NewBazaar',
-        'Masangasweediya',
-        'Fort',
-        'HultsdorfWest',
-        'HultsdorfEast',
-        'Keselwatta',
-        'Panchikawatta',
-        'MaligawattaWest',
-        'Maradana',
-        'Hunupitiya',
-        'Wekanda',
-        'Dematagoda',
-        'KuppiyawattaEast',
-        'Wanathamulla',
-        'BorellaNorth',
-        'KuppiyawattaWest',
-        'CinnamonGardens',
-        'BorellaSouth',
-        'Gothamipura',
-        'Narahenpita',
-        'Thimbirigasyaya'
-      ]
-    >;
-    GN_Division: Attribute.Enumeration<
-      [
-        'Sammanthranapura 005',
-        'Mattakkuliya 010',
-        'Modara 015',
-        'Madampitiya 020',
-        'Mahawatta 025',
-        'Aluthmawatha 030',
-        'Lunupokuna 035',
-        'Kotahena West 050',
-        'Kotahena East 045',
-        'Bloemendhal 040',
-        'Jinthupitiya 060',
-        'Kochchikade North 055',
-        'Kochchikade South 110',
-        'Grandpass North 080',
-        'Nawagampura 085',
-        'Maligawatta East 090',
-        'Grandpass South 075',
-        'Kettarama 095',
-        'New Bazaar 070'
-      ]
-    >;
-    Street_Village: Attribute.Enumeration<
-      [
-        'Sri Wickramapura',
-        'Sammanthranapura Road',
-        'Gemunu pura',
-        'Pichchamal watta',
-        'Gemunupura Road',
-        'Hadala Thotupla Rd',
-        'farm Rd',
-        'kadiranawath Housing   Scheme',
-        'Mudali john Rodrigo  Mw',
-        'Modara Street',
-        'S.D Fernando Road',
-        "St. Mery's Road",
-        'Pranshawatta Lane',
-        'Kelani Ganga Mill Road',
-        'Sri Kalyani gangarama Mawatha',
-        'Sri Wckrama Mawatha',
-        'Rawatta Lane',
-        'Malwatta Lane',
-        'Center Road',
-        'Saviya Lane',
-        'Fergussion Lane',
-        'Crow Island Road',
-        'Rodrigo place',
-        'Jubili Mawatha',
-        'Church Lane',
-        'Madampitiya Road',
-        'Bloemendhal Road',
-        'Mahawaththa Rd',
-        'Henamulla lane'
-      ]
-    >;
-    District_Organizer: Attribute.String;
-    Seat_Organizer: Attribute.String;
-    Local_Authority_Organizer: Attribute.String;
-    Ward_Organizer: Attribute.String;
-    GN_Division_Organizer: Attribute.String;
-    Street_Village_Organizer: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::voter.voter',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::voter.voter',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -866,6 +676,248 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiOrganizerOrganizer extends Schema.CollectionType {
+  collectionName: 'organizers';
+  info: {
+    singularName: 'organizer';
+    pluralName: 'organizers';
+    displayName: 'Organizer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    district: Attribute.Integer;
+    seat: Attribute.Integer;
+    local_authority: Attribute.Integer;
+    ward: Attribute.Integer;
+    gn_division: Attribute.Integer;
+    village_street: Attribute.Integer;
+    nic_number: Attribute.String;
+    njp_party_member: Attribute.Boolean & Attribute.DefaultTo<false>;
+    title: Attribute.String;
+    occupation: Attribute.String;
+    name: Attribute.String;
+    date_of_birth: Attribute.String;
+    gender: Attribute.String;
+    address: Attribute.String;
+    civil_status: Attribute.String;
+    mobile_number_1: Attribute.String;
+    mobile_number_2: Attribute.String;
+    whats_app_number: Attribute.String;
+    facebook_link: Attribute.String;
+    level_of_strength: Attribute.String;
+    organizer_category: Attribute.String;
+    political_background: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::organizer.organizer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::organizer.organizer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiVoterVoter extends Schema.CollectionType {
+  collectionName: 'voters';
+  info: {
+    singularName: 'voter';
+    pluralName: 'voters';
+    displayName: 'Voter';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    NIC_Number: Attribute.String & Attribute.Unique;
+    Title: Attribute.Enumeration<
+      ['Madam', 'Mr', 'Mrs', 'Ms', 'Miss', 'Dr', 'Professor ']
+    >;
+    Occupation: Attribute.String;
+    Gender: Attribute.Enumeration<['Male', 'Female', 'Other']>;
+    Address: Attribute.String;
+    Civil_Status: Attribute.String;
+    NJP_Party_Member: Attribute.Boolean;
+    Date_of_Birth: Attribute.Date;
+    Mobile_Number_1: Attribute.String;
+    Mobile_Number_2: Attribute.String;
+    WhatsApp_Number: Attribute.String;
+    Facebook_Link: Attribute.String;
+    District: Attribute.Enumeration<['Colombo']>;
+    Seat: Attribute.Enumeration<
+      [
+        'ColomboNorth',
+        'ColomboCentral',
+        'Borella',
+        'ColomboEast',
+        'ColomboWest',
+        'Dehiwala',
+        'Ratmalana',
+        'Kollonnawa',
+        'Kotte',
+        'Kaduwela',
+        'Awissawella',
+        'Homagama',
+        'Maharagama',
+        'Kesbewa',
+        'Moratuwa'
+      ]
+    >;
+    Local_Authority: Attribute.Enumeration<
+      [
+        'Colombo Municipal Council',
+        'Dehiwala',
+        'MountLavinia',
+        'Municipal Council Dehiwala',
+        'MountLavinia Municipal Council',
+        'Kollonnawa Urban Council',
+        'Kotikawatta',
+        'Mulleriyawa Pradeshiyasabha',
+        'Sri Jayawardenepura Kotte Municipal Council',
+        'Kaduwela Municipal Council',
+        'Seethawakapura Urban Council',
+        'Seethawakapura Pradeshiyasabha',
+        'Homagama PradeshiyaSabha',
+        'Maharagama UrbanCouncil',
+        'Kesbewa UrbanCouncil',
+        'Boralesgamuwa Urban Council',
+        'Moratuwa Municipal Council'
+      ]
+    >;
+    Ward: Attribute.Enumeration<
+      [
+        'Sammanthranapura',
+        'Mattakkuliya',
+        'Modara',
+        'Mahawatta',
+        'AluthMawatha',
+        'Lunupokuna',
+        'KotahenaWest',
+        'KotahenaEast',
+        'Bloemendhal',
+        'Jintupitiya',
+        'Kochchikade',
+        'KochchikadeSouth',
+        'GrandpassNorth',
+        'Navagampura',
+        'MaligawattaEast',
+        'GrandpassSouth',
+        'Khettarama',
+        'NewBazaar',
+        'Masangasweediya',
+        'Fort',
+        'HultsdorfWest',
+        'HultsdorfEast',
+        'Keselwatta',
+        'Panchikawatta',
+        'MaligawattaWest',
+        'Maradana',
+        'Hunupitiya',
+        'Wekanda',
+        'Dematagoda',
+        'KuppiyawattaEast',
+        'Wanathamulla',
+        'BorellaNorth',
+        'KuppiyawattaWest',
+        'CinnamonGardens',
+        'BorellaSouth',
+        'Gothamipura',
+        'Narahenpita',
+        'Thimbirigasyaya'
+      ]
+    >;
+    GN_Division: Attribute.Enumeration<
+      [
+        'Sammanthranapura 005',
+        'Mattakkuliya 010',
+        'Modara 015',
+        'Madampitiya 020',
+        'Mahawatta 025',
+        'Aluthmawatha 030',
+        'Lunupokuna 035',
+        'Kotahena West 050',
+        'Kotahena East 045',
+        'Bloemendhal 040',
+        'Jinthupitiya 060',
+        'Kochchikade North 055',
+        'Kochchikade South 110',
+        'Grandpass North 080',
+        'Nawagampura 085',
+        'Maligawatta East 090',
+        'Grandpass South 075',
+        'Kettarama 095',
+        'New Bazaar 070'
+      ]
+    >;
+    Street_Village: Attribute.Enumeration<
+      [
+        'Sri Wickramapura',
+        'Sammanthranapura Road',
+        'Gemunu pura',
+        'Pichchamal watta',
+        'Gemunupura Road',
+        'Hadala Thotupla Rd',
+        'farm Rd',
+        'kadiranawath Housing   Scheme',
+        'Mudali john Rodrigo  Mw',
+        'Modara Street',
+        'S.D Fernando Road',
+        "St. Mery's Road",
+        'Pranshawatta Lane',
+        'Kelani Ganga Mill Road',
+        'Sri Kalyani gangarama Mawatha',
+        'Sri Wckrama Mawatha',
+        'Rawatta Lane',
+        'Malwatta Lane',
+        'Center Road',
+        'Saviya Lane',
+        'Fergussion Lane',
+        'Crow Island Road',
+        'Rodrigo place',
+        'Jubili Mawatha',
+        'Church Lane',
+        'Madampitiya Road',
+        'Bloemendhal Road',
+        'Mahawaththa Rd',
+        'Henamulla lane'
+      ]
+    >;
+    District_Organizer: Attribute.String;
+    Seat_Organizer: Attribute.String;
+    Local_Authority_Organizer: Attribute.String;
+    Ward_Organizer: Attribute.String;
+    GN_Division_Organizer: Attribute.String;
+    Street_Village_Organizer: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::voter.voter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::voter.voter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Shared {
     export interface ContentTypes {
@@ -876,13 +928,14 @@ declare module '@strapi/strapi' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::voter.voter': ApiVoterVoter;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::organizer.organizer': ApiOrganizerOrganizer;
+      'api::voter.voter': ApiVoterVoter;
     }
   }
 }

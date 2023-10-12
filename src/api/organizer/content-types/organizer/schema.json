@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizers",
+  "info": {
+    "singularName": "organizer",
+    "pluralName": "organizers",
+    "displayName": "Organizer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "district": {
+      "type": "integer"
+    },
+    "seat": {
+      "type": "integer"
+    },
+    "local_authority": {
+      "type": "integer"
+    },
+    "ward": {
+      "type": "integer"
+    },
+    "gn_division": {
+      "type": "integer"
+    },
+    "village_street": {
+      "type": "integer"
+    },
+    "nic_number": {
+      "type": "string"
+    },
+    "njp_party_member": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "occupation": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "civil_status": {
+      "type": "string"
+    },
+    "mobile_number_1": {
+      "type": "string"
+    },
+    "mobile_number_2": {
+      "type": "string"
+    },
+    "whats_app_number": {
+      "type": "string"
+    },
+    "facebook_link": {
+      "type": "string"
+    },
+    "level_of_strength": {
+      "type": "string"
+    },
+    "organizer_category": {
+      "type": "string"
+    },
+    "political_background": {
+      "type": "string"
+    }
+  }
+}
