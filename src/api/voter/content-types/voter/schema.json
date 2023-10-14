@@ -20,28 +20,8 @@
       "unique": true,
       "required": false
     },
-    "Title": {
-      "type": "enumeration",
-      "enum": [
-        "Madam",
-        "Mr",
-        "Mrs",
-        "Ms",
-        "Miss",
-        "Dr",
-        "Professor "
-      ]
-    },
     "Occupation": {
       "type": "string"
-    },
-    "Gender": {
-      "type": "enumeration",
-      "enum": [
-        "Male",
-        "Female",
-        "Other"
-      ]
     },
     "Address": {
       "type": "string"
@@ -67,155 +47,6 @@
     "Facebook_Link": {
       "type": "string"
     },
-    "District": {
-      "type": "enumeration",
-      "enum": [
-        "Colombo"
-      ]
-    },
-    "Seat": {
-      "type": "enumeration",
-      "enum": [
-        "ColomboNorth",
-        "ColomboCentral",
-        "Borella",
-        "ColomboEast",
-        "ColomboWest",
-        "Dehiwala",
-        "Ratmalana",
-        "Kollonnawa",
-        "Kotte",
-        "Kaduwela",
-        "Awissawella",
-        "Homagama",
-        "Maharagama",
-        "Kesbewa",
-        "Moratuwa"
-      ]
-    },
-    "Local_Authority": {
-      "type": "enumeration",
-      "enum": [
-        "Colombo Municipal Council",
-        "Dehiwala",
-        "MountLavinia",
-        "Municipal Council Dehiwala",
-        "MountLavinia Municipal Council",
-        "Kollonnawa Urban Council",
-        "Kotikawatta",
-        "Mulleriyawa Pradeshiyasabha",
-        "Sri Jayawardenepura Kotte Municipal Council",
-        "Kaduwela Municipal Council",
-        "Seethawakapura Urban Council",
-        "Seethawakapura Pradeshiyasabha",
-        "Homagama PradeshiyaSabha",
-        "Maharagama UrbanCouncil",
-        "Kesbewa UrbanCouncil",
-        "Boralesgamuwa Urban Council",
-        "Moratuwa Municipal Council"
-      ]
-    },
-    "Ward": {
-      "type": "enumeration",
-      "enum": [
-        "Sammanthranapura",
-        "Mattakkuliya",
-        "Modara",
-        "Mahawatta",
-        "AluthMawatha",
-        "Lunupokuna",
-        "KotahenaWest",
-        "KotahenaEast",
-        "Bloemendhal",
-        "Jintupitiya",
-        "Kochchikade",
-        "KochchikadeSouth",
-        "GrandpassNorth",
-        "Navagampura",
-        "MaligawattaEast",
-        "GrandpassSouth",
-        "Khettarama",
-        "NewBazaar",
-        "Masangasweediya",
-        "Fort",
-        "HultsdorfWest",
-        "HultsdorfEast",
-        "Keselwatta",
-        "Panchikawatta",
-        "MaligawattaWest",
-        "Maradana",
-        "Hunupitiya",
-        "Wekanda",
-        "Dematagoda",
-        "KuppiyawattaEast",
-        "Wanathamulla",
-        "BorellaNorth",
-        "KuppiyawattaWest",
-        "CinnamonGardens",
-        "BorellaSouth",
-        "Gothamipura",
-        "Narahenpita",
-        "Thimbirigasyaya"
-      ]
-    },
-    "GN_Division": {
-      "type": "enumeration",
-      "enum": [
-        "Sammanthranapura 005",
-        "Mattakkuliya 010",
-        "Modara 015",
-        "Madampitiya 020",
-        "Mahawatta 025",
-        "Aluthmawatha 030",
-        "Lunupokuna 035",
-        "Kotahena West 050",
-        "Kotahena East 045",
-        "Bloemendhal 040",
-        "Jinthupitiya 060",
-        "Kochchikade North 055",
-        "Kochchikade South 110",
-        "Grandpass North 080",
-        "Nawagampura 085",
-        "Maligawatta East 090",
-        "Grandpass South 075",
-        "Kettarama 095",
-        "New Bazaar 070"
-      ]
-    },
-    "Street_Village": {
-      "type": "enumeration",
-      "enum": [
-        "Sri Wickramapura",
-        "Sammanthranapura Road",
-        "Gemunu pura",
-        "Pichchamal watta",
-        "Gemunupura Road",
-        "Hadala Thotupla Rd",
-        "farm Rd",
-        "kadiranawath Housing   Scheme",
-        "Mudali john Rodrigo  Mw",
-        "Modara Street",
-        "S.D Fernando Road",
-        "St. Mery's Road",
-        "Pranshawatta Lane",
-        "Kelani Ganga Mill Road",
-        "Sri Kalyani gangarama Mawatha",
-        "Sri Wckrama Mawatha",
-        "Rawatta Lane",
-        "Malwatta Lane",
-        "Center Road",
-        "Saviya Lane",
-        "Fergussion Lane",
-        "Crow Island Road",
-        "Rodrigo place",
-        "Jubili Mawatha",
-        "Church Lane",
-        "Madampitiya Road",
-        "Bloemendhal Road",
-        "Mahawaththa Rd",
-        "Henamulla lane"
-      ]
-    },
     "District_Organizer": {
       "type": "string"
     },
@@ -233,6 +64,27 @@
     },
     "Street_Village_Organizer": {
       "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Gender": {
+      "type": "string"
+    },
+    "District": {
+      "type": "integer"
+    },
+    "Local_Authority": {
+      "type": "integer"
+    },
+    "Seat": {
+      "type": "integer"
+    },
+    "GN_Division": {
+      "type": "integer"
+    },
+    "Street_Village": {
+      "type": "integer"
     }
   }
 }
