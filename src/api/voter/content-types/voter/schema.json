@@ -85,6 +85,9 @@
     },
     "Street_Village": {
       "type": "integer"
+    },
+    "Ward": {
+      "type": "integer"
     }
   }
 }
