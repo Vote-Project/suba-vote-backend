@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizers_tasks",
+  "info": {
+    "singularName": "organizers-task",
+    "pluralName": "organizers-tasks",
+    "displayName": "organizersTask",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orId": {
+      "type": "integer"
+    },
+    "orName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "initiate",
+        "in-progress",
+        "Successes",
+        "Paschal Successes",
+        "Un-Successes"
+      ]
+    },
+    "Task": {
+      "type": "integer"
+    }
+  }
+}

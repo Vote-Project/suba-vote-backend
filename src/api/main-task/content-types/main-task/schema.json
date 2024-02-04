@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "main_tasks",
+  "info": {
+    "singularName": "main-task",
+    "pluralName": "main-tasks",
+    "displayName": "mainTask",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "task": {
+      "type": "string"
+    }
+  }
+}

@@ -12,72 +12,78 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "district": {
+    "District": {
       "type": "integer"
     },
-    "seat": {
+    "Seat": {
       "type": "integer"
     },
-    "local_authority": {
+    "Local_Authority": {
       "type": "integer"
     },
-    "ward": {
+    "Ward": {
       "type": "integer"
     },
-    "gn_division": {
+    "GN_Division": {
       "type": "integer"
     },
-    "village_street": {
+    "Street_Village": {
       "type": "integer"
     },
-    "nic_number": {
+    "NIC_Number": {
       "type": "string"
     },
-    "njp_party_member": {
+    "NJP_Party_Member": {
       "type": "boolean",
       "default": false
     },
-    "title": {
+    "Title": {
       "type": "string"
     },
-    "occupation": {
+    "Occupation": {
       "type": "string"
     },
-    "name": {
+    "Name": {
       "type": "string"
     },
-    "date_of_birth": {
+    "Date_of_Birth": {
       "type": "string"
     },
-    "gender": {
+    "Gender": {
       "type": "string"
     },
-    "address": {
+    "Address": {
       "type": "string"
     },
-    "civil_status": {
+    "Civil_Status": {
       "type": "string"
     },
-    "mobile_number_1": {
+    "Mobile_Number_1": {
       "type": "string"
     },
-    "mobile_number_2": {
+    "Mobile_Number_2": {
       "type": "string"
     },
-    "whats_app_number": {
+    "WhatsApp_Number": {
       "type": "string"
     },
-    "facebook_link": {
+    "Facebook_Link": {
       "type": "string"
     },
-    "level_of_strength": {
+    "Level_of_Strength": {
       "type": "string"
     },
-    "organizer_category": {
+    "Organizer_Category": {
       "type": "string"
     },
-    "political_background": {
+    "Political_Background": {
       "type": "string"
+    },
+    "Meeting_Complete": {
+      "type": "boolean"
+    },
+    "Meeting_Date": {
+      "type": "date"
     }
   }
 }

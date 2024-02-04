@@ -630,7 +630,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -659,6 +658,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    profilePic: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -669,6 +669,36 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'plugin::users-permissions.user',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMainTaskMainTask extends Schema.CollectionType {
+  collectionName: 'main_tasks';
+  info: {
+    singularName: 'main-task';
+    pluralName: 'main-tasks';
+    displayName: 'mainTask';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    task: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::main-task.main-task',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::main-task.main-task',
       'oneToOne',
       'admin::user'
     > &
@@ -688,28 +718,30 @@ export interface ApiOrganizerOrganizer extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    district: Attribute.Integer;
-    seat: Attribute.Integer;
-    local_authority: Attribute.Integer;
-    ward: Attribute.Integer;
-    gn_division: Attribute.Integer;
-    village_street: Attribute.Integer;
-    nic_number: Attribute.String;
-    njp_party_member: Attribute.Boolean & Attribute.DefaultTo<false>;
-    title: Attribute.String;
-    occupation: Attribute.String;
-    name: Attribute.String;
-    date_of_birth: Attribute.String;
-    gender: Attribute.String;
-    address: Attribute.String;
-    civil_status: Attribute.String;
-    mobile_number_1: Attribute.String;
-    mobile_number_2: Attribute.String;
-    whats_app_number: Attribute.String;
-    facebook_link: Attribute.String;
-    level_of_strength: Attribute.String;
-    organizer_category: Attribute.String;
-    political_background: Attribute.String;
+    District: Attribute.Integer;
+    Seat: Attribute.Integer;
+    Local_Authority: Attribute.Integer;
+    Ward: Attribute.Integer;
+    GN_Division: Attribute.Integer;
+    Street_Village: Attribute.Integer;
+    NIC_Number: Attribute.String;
+    NJP_Party_Member: Attribute.Boolean & Attribute.DefaultTo<false>;
+    Title: Attribute.String;
+    Occupation: Attribute.String;
+    Name: Attribute.String;
+    Date_of_Birth: Attribute.String;
+    Gender: Attribute.String;
+    Address: Attribute.String;
+    Civil_Status: Attribute.String;
+    Mobile_Number_1: Attribute.String;
+    Mobile_Number_2: Attribute.String;
+    WhatsApp_Number: Attribute.String;
+    Facebook_Link: Attribute.String;
+    Level_of_Strength: Attribute.String;
+    Organizer_Category: Attribute.String;
+    Political_Background: Attribute.String;
+    Meeting_Complete: Attribute.Boolean;
+    Meeting_Date: Attribute.Date;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -721,6 +753,48 @@ export interface ApiOrganizerOrganizer extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::organizer.organizer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiOrganizersTaskOrganizersTask extends Schema.CollectionType {
+  collectionName: 'organizers_tasks';
+  info: {
+    singularName: 'organizers-task';
+    pluralName: 'organizers-tasks';
+    displayName: 'organizersTask';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    orId: Attribute.Integer;
+    orName: Attribute.String;
+    description: Attribute.String;
+    Status: Attribute.Enumeration<
+      [
+        'initiate',
+        'in-progress',
+        'Successes',
+        'Paschal Successes',
+        'Un-Successes'
+      ]
+    >;
+    Task: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::organizers-task.organizers-task',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::organizers-task.organizers-task',
       'oneToOne',
       'admin::user'
     > &
@@ -751,12 +825,6 @@ export interface ApiVoterVoter extends Schema.CollectionType {
     Mobile_Number_2: Attribute.String;
     WhatsApp_Number: Attribute.String;
     Facebook_Link: Attribute.String;
-    District_Organizer: Attribute.String;
-    Seat_Organizer: Attribute.String;
-    Local_Authority_Organizer: Attribute.String;
-    Ward_Organizer: Attribute.String;
-    GN_Division_Organizer: Attribute.String;
-    Street_Village_Organizer: Attribute.String;
     Title: Attribute.String;
     Gender: Attribute.String;
     District: Attribute.Integer;
@@ -765,6 +833,17 @@ export interface ApiVoterVoter extends Schema.CollectionType {
     GN_Division: Attribute.Integer;
     Street_Village: Attribute.Integer;
     Ward: Attribute.Integer;
+    Ward_Organizer_Authentication: Attribute.String;
+    Category_of_Programmes_Authentication: Attribute.String;
+    Programme_Authentication: Attribute.String;
+    Location_Authentication: Attribute.String;
+    Date_of_Programme_Conducted_Authentication: Attribute.Date;
+    District_Organizer: Attribute.Integer;
+    Ward_Organizer: Attribute.Integer;
+    Seat_Organizer: Attribute.Integer;
+    GN_Division_Organizer: Attribute.Integer;
+    Local_Authority_Organizer: Attribute.Integer;
+    Street_Village_Organizer: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -799,7 +878,9 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::main-task.main-task': ApiMainTaskMainTask;
       'api::organizer.organizer': ApiOrganizerOrganizer;
+      'api::organizers-task.organizers-task': ApiOrganizersTaskOrganizersTask;
       'api::voter.voter': ApiVoterVoter;
     }
   }

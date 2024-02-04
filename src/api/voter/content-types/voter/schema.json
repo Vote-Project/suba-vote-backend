@@ -47,24 +47,6 @@
     "Facebook_Link": {
       "type": "string"
     },
-    "District_Organizer": {
-      "type": "string"
-    },
-    "Seat_Organizer": {
-      "type": "string"
-    },
-    "Local_Authority_Organizer": {
-      "type": "string"
-    },
-    "Ward_Organizer": {
-      "type": "string"
-    },
-    "GN_Division_Organizer": {
-      "type": "string"
-    },
-    "Street_Village_Organizer": {
-      "type": "string"
-    },
     "Title": {
       "type": "string"
     },
@@ -87,6 +69,39 @@
       "type": "integer"
     },
     "Ward": {
+      "type": "integer"
+    },
+    "Ward_Organizer_Authentication": {
+      "type": "string"
+    },
+    "Category_of_Programmes_Authentication": {
+      "type": "string"
+    },
+    "Programme_Authentication": {
+      "type": "string"
+    },
+    "Location_Authentication": {
+      "type": "string"
+    },
+    "Date_of_Programme_Conducted_Authentication": {
+      "type": "date"
+    },
+    "District_Organizer": {
+      "type": "integer"
+    },
+    "Ward_Organizer": {
+      "type": "integer"
+    },
+    "Seat_Organizer": {
+      "type": "integer"
+    },
+    "GN_Division_Organizer": {
+      "type": "integer"
+    },
+    "Local_Authority_Organizer": {
+      "type": "integer"
+    },
+    "Street_Village_Organizer": {
       "type": "integer"
     }
   }
