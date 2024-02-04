@@ -783,7 +783,8 @@ export interface ApiOrganizersTaskOrganizersTask extends Schema.CollectionType {
         'Paschal Successes',
         'Un-Successes'
       ]
-    >;
+    > &
+      Attribute.DefaultTo<'initiate'>;
     Task: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

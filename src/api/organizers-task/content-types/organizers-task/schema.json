@@ -29,7 +29,8 @@
         "Successes",
         "Paschal Successes",
         "Un-Successes"
-      ]
+      ],
+      "default": "initiate"
     },
     "Task": {
       "type": "integer"
